@@ -28,7 +28,7 @@ class PostsController < ApplicationController
   
 
   @user = User.find(current_user)
-@post = Post.new(post_params)
+@post = @user.posts.build(post_params)
 
    
 
